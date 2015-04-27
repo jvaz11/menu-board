@@ -1,0 +1,47 @@
+{
+  "appetizers": [
+    {
+      "name": "Red",
+      "description": "an amaing thing omg I love it!",
+      "price": 99
+    },
+    {
+      "name": "Purple",
+      "description": "an amaing thing omg I love it!",
+      "price": 99
+    },
+    {
+      "name": "Gold",
+      "description": "an amaing thing omg I love it!",
+      "price": 99
+    },
+    {
+      "name": "Green",
+      "description": "an amaing thing omg I love it!",
+      "price": 99
+    }
+  ],
+  "favorites": [
+    {
+      "name": "Red",
+      "description": "an amaing thing omg I love it!",
+      "price": 99
+    },
+    {
+      "name": "Purple",
+      "description": "an amaing thing omg I love it!",
+      "price": 99
+    },
+    {
+      "name": "Gold",
+      "description": "an amaing thing omg I love it!",
+      "price": 99
+    },
+    {
+      "name": "Green",
+      "description": "an amaing thing omg I love it!",
+      "price": 99
+    }
+  ]
+}
+

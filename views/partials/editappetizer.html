@@ -1,0 +1,23 @@
+<div class="modal fade" id="editModal">
+    <div class="modal-dialog" style="z-index: 0">
+        <div class="modal-content">
+            <div class="panel panel-warning title">
+                <div class="panel-heading title">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="panel-title">Edit Appetizer</h3>
+                </div>
+                <div class="panel-body">
+                    <form ng-submit="editAppetizer(selectedAppetizer)">
+                        <input type="text" ng-model="selectedAppetizer.name" class="form-control" placeholder="What's it called?" required>
+                        <br>
+                        <textarea ng-model="selectedAppetizer.description" class="form-control" placeholder="Describe the item..." required></textarea>
+                        <br>
+                        <input type="number" ng-model="selectedAppetizer.price" class="form-control" placeholder="Price" required>
+                        <br>
+                        <input type="submit" value="Post" class="btn btn-warning">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
