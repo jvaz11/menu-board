@@ -1,4 +1,18 @@
-angular.module('MenuBoardApp', ['firebase'])
+angular.module('MenuBoardApp', ['firebase', 'ngRoute'])
+    .config(function($routeProvider) {
+        $routeProvider
+            .when('/editor', {
+                templateUrl: 'views/editor.html',
+                controller: 'MainController'
+            })
+            .when('/display', {
+                templateUrl: 'views/display.html',
+                controller: 'MainController'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
+    })
     .constant('FURL', 'https://menuboard.firebaseio.com/')
     .controller('MainController', ['$scope', '$firebase', 'FURL', function($scope, $firebase, FURL) {
         var ref = new Firebase(FURL);
@@ -19,4 +33,9 @@ angular.module('MenuBoardApp', ['firebase'])
         $scope.updateAppetizer = function(appetizer) {
             $scope.selectedMessage.$save(appetizer);
         };
+
+        $scope.removeItem = function(item) {
+            $scope.appetizers.$remove(item);
+        };
+
     }]);
