@@ -1,0 +1,33 @@
+<div class="header">
+        <h1><span>Italy</span><span>Bites</span></h1>
+    </div>
+    <div class="main">
+        <div class="container">
+            <h1>Specials for {{ today | date }}</h1>
+            <h2>Appetizers</h2>
+            <div class="appetizer row" ng-repeat="item in appetizers">
+                <div class="item col-md-9 repeated-item">
+                    <span class="name item-name repeated-item"> {{item.name}}</span>
+                    <p class="description"> {{item.description}} </p>
+                </div>
+                <div class="price col-md-3">
+                    <p class="price"> {{item.price | currency}} </p>
+                </div>
+            </div>
+           
+            <h2>Favorites</h2>
+            <div class="favorites row" ng-repeat="favorite in favorites">
+                <div class="item col-md-9">
+                    <h3 class="name"> {{favorite.name}} </h3>
+                    <p class="description"> {{favorite.description}} </p>
+                </div>
+                <div class="price col-md-3">
+                    <p class="price"> {{favorite.price | currency}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <!-- Included Modals -->
+    <div ng-include="'views/partials/appetizer.html'"></div>

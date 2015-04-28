@@ -1,0 +1,38 @@
+<nav class="navbar navbar-fixed-top" style="background-color: #1D242C">
+    <div class="nav-wrapper">
+      <h3 class="text-center" style="color: #fff"><i class="mdi-content-create"></i></h3>
+      </ul>
+    </div>
+  </nav>
+        
+<div class="main" style="margin-top: 100px">
+    <div class="container">
+        <h2>Appetizers</h2>
+        <div class="appetizer row" ng-repeat="item in appetizers">
+            <div class="item col-md-9 repeated-item">
+                <span class="name item-name repeated-item"> {{item.name}}</span><span ng-click="removeItem(item)">   <i class="mdi-action-delete"></i></span>
+                <p class="description"> {{item.description}} </p>
+            </div>
+            <div class="price col-md-3">
+                <p class="price"> {{item.price | currency}} </p>
+            </div>
+        </div>
+        <div class="appetizer row text-center">
+            <a href="" data-toggle="modal" data-target="#appModal" class="btn btn-success waves-effect waves-light btn-fab btn-raised mdi-content-add"></a>
+        </div>
+        <h2>Favorites</h2>
+        <div class="favorites row" ng-repeat="favorite in favorites">
+            <div class="item col-md-9">
+                <h3 class="name"> {{favorite.name}} </h3>
+                <p class="description"> {{favorite.description}} </p>
+            </div>
+            <div class="price col-md-3">
+                <p class="price"> {{favorite.price | currency}} </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+</div>
+<!-- Included Modals -->
+<div ng-include="'views/partials/appetizer.html'"></div>

@@ -11,47 +11,15 @@
     <link href="css/main.css" rel="stylesheet" />
 </head>
 
-
 <body ng-app="MenuBoardApp" ng-controller="MainController">
-    <div class="header">
-        <h1><span>Italy</span><span>Bites</span></h1>
-    </div>
-    <div class="main">
-        <div class="container">
-            <h1>Specials for {{ today | date }}</h1>
-            <h2>Appetizers</h2>
-            <div class="appetizer row" ng-repeat="item in appetizers">
-                <div class="item col-md-9">
-                    <h3 class="name"> {{item.name}} </h3>
-                    <p class="description"> {{item.description}} </p>
-                </div>
-                <div class="price col-md-3">
-                    <p class="price"> {{item.price | currency}} </p>
-                </div>
-            </div>
-            <div class="appetizer row text-center">
-                <a href="javascript:void(0)" data-toggle="modal" data-target="#appModal" class="btn btn-success btn-fab btn-raised mdi-content-add"></a>
-
-            </div>
-            <h2>Favorites</h2>
-            <div class="favorites row" ng-repeat="favorite in favorites">
-                <div class="item col-md-9">
-                    <h3 class="name"> {{favorite.name}} </h3>
-                    <p class="description"> {{favorite.description}} </p>
-                </div>
-                <div class="price col-md-3">
-                    <p class="price"> {{favorite.price | currency}} </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
+    <div>
+        <div ng-view=""></div>    
     </div>
 
-    <!-- Included Modals -->
-    <div ng-include="'views/partials/appetizer.html'"></div>
+    
+    
     <!-- Modules -->
-    <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.js"></script>
@@ -64,6 +32,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/js/material.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/js/ripples.js"></script>
+    <script>
+    $(document).ready(function() {
+        $.material.init();
+    });
+    </script>
     <script src="js/app.js"></script>
 </body>
 
